@@ -1,0 +1,129 @@
+.page .content .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.card {
+    padding: 20px;
+    position: relative;
+}
+.card .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.card .contact div,
+.card .online-state {
+    display: inline-flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.card .contact div:hover .Sicon {
+    fill: black;
+}
+.card .contact .Sicon {
+    width: 18px;
+    height: 16px;
+    fill: var(--grey-color);
+
+    transition: .3s;
+}
+.card .online-state {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: default;
+}
+.card .online-state .Sicon {
+    width: 18px;
+    height: 16px;
+    fill: var(--green-color);
+
+    animation: flash 5s linear infinite alternate;
+}
+@keyframes flash {
+    from {
+        fill: rgb(174, 255, 179);
+    }
+    to {
+        fill: var(--green-color);
+    }
+}
+.card .image {
+    text-align: center;
+    margin-top: 10px;
+}
+.card .image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.card .image h3 {
+    font-size: 17px;
+    margin: 10px 0 5px 0;
+}
+.card .image p {
+    color: var(--grey-color);
+    font-size: 15px;
+}
+.card .details {
+    position: relative;
+    margin-top: 10px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.card .details span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+}
+.card .details span:not(:nth-child(3)) {
+    margin-bottom: 10px;
+}
+.card .details span .Sicon {
+    width: 14px;
+    height: 14px;
+}
+.card .details .vip {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffd700;
+    opacity: .5;
+    margin: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.card .foot {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .foot > span {
+    color: var(--grey-color);
+    font-size: 13px;
+}
+.card .foot .buttons span {
+    padding: 4px 10px;
+    color: white;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.card .foot .buttons .btn-profile {
+    background-color: var(--blue-color);
+}
+.card .foot .buttons .btn-remove {
+    background-color: var(--red-color);
+}
+
+.card:has(.vip) {
+    outline: 2px solid #ffd700;
+}

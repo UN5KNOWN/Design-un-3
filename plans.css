@@ -1,0 +1,165 @@
+.page .content .wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.plan-card {
+    padding: 60px 40px;
+    background-color: white;
+    width: 350px;
+}
+.plan-card .header-icons {
+    margin-bottom: 30px;
+}
+.plan-card .header-icons .Sicon {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.plan-card .header-icons .best-offer {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 120px;
+    background-color: white;
+    padding: 2px 5px;
+    text-transform: uppercase;
+}
+.plan-card .header-icons .best-offer .Sicon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 5px;
+}
+.plan-card > p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.plan-card .price {
+    font-size: 60px;
+    font-weight: bold;
+}
+.plan-card .price + span {
+    color: var(--grey-color);
+}
+.plan-card .features {
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    font-weight: 500;
+}
+.plan-card .features ul {
+    margin-top: 20px;
+}
+.plan-card .features ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.plan-card .features ul li::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding-right: 15px;
+}
+.plan-card .btn-upgrade,
+.plan-card .btn-contact-sales {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+}
+.plan-card .btn-upgrade {
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
+    margin-top: 40px;
+
+    transition: .3s;
+}
+.plan-card .btn-upgrade:hover {
+    background-color: white;
+    color: black;
+    outline: 2px solid black;
+}
+.plan-card .btn-contact-sales {
+    color: black;
+    margin-top: 20px;
+}
+.plan-card .btn-contact-sales:hover {
+    text-decoration: underline;
+}
+.enterprice {
+    background-color: rgb(244 67 45 / 30%);
+}
+.enterprice .btn-upgrade {
+    color: #f2bfbc;
+}
+.enterprice .btn-upgrade:hover {
+    background-color: #f2bfbc;
+}
+.business {
+    background-color: rgb(34 197 94 / 30%);
+}
+.business .btn-upgrade {
+    color: #b2e6ca;
+}
+.business .btn-upgrade:hover {
+    background-color: #b2e6ca;
+}
+@media (min-width: 1200px) {
+    .plan-card {
+        position: relative;
+        overflow: hidden;
+        height: fit-content;
+    }
+    .plan-card .btn-upgrade,
+    .plan-card .btn-contact-sales {
+        position: relative;
+    }
+    .plan-card::before {
+        content: '';
+        position: absolute;
+        top: var(--y);
+        left: var(--x);
+        transform: translate(-50%, -50%);
+        background-image: radial-gradient(rgba(0, 0, 0, 0.09), transparent, transparent);
+        width: 700px;
+        height: 700px;
+        opacity: 0;
+
+        transition: .5s, top 0s, left 0s;
+    }
+    .plan-card:hover::before {
+        opacity: 1;
+    }
+    .enterprice::before,
+    .business::before {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.57), transparent, transparent);
+    }
+    /* .plan-card::after {
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background-color: rgba(255, 255, 255, 0.126);
+    } */
+}
+@media (max-width: 1199px) {
+    .page .content .wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .plan-card {
+        height: 840px;
+    }
+}
+@media (max-width: 1024px) {
+    .plan-card {
+        width: 305px;
+        padding: 30px 20px;
+        height: 820px;
+    }
+}
+@media (max-width: 934px) {
+    .plan-card {
+        height: fit-content;
+    }
+}

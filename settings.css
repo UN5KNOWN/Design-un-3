@@ -1,0 +1,257 @@
+
+.card {
+  padding: 20px;
+}
+/* Start Site Control Card */
+.site-control > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.site-control > div {
+  margin-bottom: 20px;
+}
+.site-control .info p {
+  margin-top: 5px;
+  color: var(--grey-color);
+  font-size: 13px;
+}
+.site-control form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  resize: none;
+  font-size: 13px;
+  height: 150px;
+  line-height: 1.4;
+}
+/* End Site Control Card */
+/* Start General Info Card */
+.gen-info form {
+  margin-top: 20px;
+}
+.gen-info form label {
+  color: var(--grey-color);
+  font-size: 14px;
+  display: block;
+}
+.gen-info form input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0 15px;
+}
+.gen-info form input[type="email"] {
+  width: 80%;
+}
+.gen-info form a {
+  margin-left: 10px;
+  color: var(--blue-color);
+}
+/* End General Info Card */
+/* Start Security Card */
+.sec-info > p {
+  margin-bottom: 20px;
+}
+.sec-info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec-info > div:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+  margin: 10px 0 15px;
+  padding-bottom: 20px;
+}
+.sec-info .info p {
+  font-size: 13px;
+  color: var(--grey-color);
+  margin-top: 10px;
+}
+.sec-info > div:first-of-type a {
+  color: white;
+  background-color: var(--blue-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.sec-info > div:first-of-type a:hover {
+  background-color: var(--blue-alt-color);
+}
+.sec-info > div:last-of-type a {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.sec-info > div:last-of-type a:hover {
+  background-color: #ccc;
+}
+/* End Security Info Card */
+/* Start Social Info Card */
+.social-info > div {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #eee;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.social-info > div span:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+.social-info > div .Sicon {
+  fill: var(--grey-color);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.social-info > div input {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #eee;
+  color: gray;
+  padding-left: 10px;
+}
+.social-info > div:focus-within .Sicon {
+  fill: black;
+}
+/* End Social Info Card */
+/* Strat Widgets Control Card */
+.widgets-control .control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.widgets-control .control input[type="checkbox"] {
+  -webkit-appearance: nono;
+  appearance: none;
+}
+.widgets-control .control label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.widgets-control .control label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.widgets-control .control label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-color);
+  border-radius: 50%;
+  margin-top: -10px;
+}
+.widgets-control .control label::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill = '%230075ff' d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/%3E%3C/svg%3E");
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -10px;
+
+  transform: scale(0);
+  transition: 0.1s;
+}
+.widgets-control .control input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+}
+/* End Widgets Control Card */
+/* Start Backup Manager Card */
+.backup-mang .control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.backup-mang .control input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.backup-mang .control label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.backup-mang .control label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.backup-mang .control label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -11.6px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-color);
+  border-radius: 50%;
+}
+.backup-mang .control label::after {
+  content: "";
+  position: absolute;
+  left: 4.6px;
+  top: 2.6px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+
+  transform: scale(0);
+  transition: 0.1s;
+}
+.backup-mang .control input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+.backup-mang .location {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+    .backup-mang .location {
+        flex-wrap: wrap;
+    }
+}
+.backup-mang .location input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.backup-mang .location input[type="radio"]:checked + div {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+.backup-mang .location input[type="radio"]:checked + div .Sicon {
+    fill: var(--blue-color);
+}
+.backup-mang .location .server {
+  border: 2px solid #eee;
+  border-radius: 6px;
+  width: 100%;
+}
+.backup-mang .location .server label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+.backup-mang .location .server:hover {
+  border-color: var(--blue-color);
+}
+/* End Backup Manager Card */
